@@ -4,17 +4,17 @@ Coherence plays a pivotal role in creating a high-quality summary of a document.
 
 <p align="center"> <img width="700" alt="approach" src="https://git.corp.adobe.com/storage/user/57159/files/7b39fa7b-a37e-469d-ba85-3a9495fa89b7"> </p>
 
-To improve the coherence in extractive summarization, we approach the concept of coherence within summaries through the lens of user-specific intent. With this user-centric perspective, our approach entails training LLMs using human feedback, a tactic aimed at refining the coherence in the generated summaries. Drawing inspiration from InstructGPT, our strategy involves fine-tuning the model to align with user intent and ensure the production of coherent summaries. Thus, our approach comprises two primary components: firstly, the aggregation of human feedback to enhance the coherence of generated summaries, and secondly, the supervised fine-tuning of open-source LLMs based on user feedback to amplify their capacity for coherent summary generation. Figure provides the schematic represntation of our proposed approach.
+To improve the coherence in extractive summarization, we approach the concept of coherence within summaries through the lens of user-specific intent. With this user-centric perspective, our approach entails training LLMs using human feedback, a tactic aimed at refining the coherence in the generated summaries. Drawing inspiration from InstructGPT, our strategy involves fine-tuning the model to align with user intent and ensure the production of coherent summaries. Thus, our approach comprises two primary components: firstly, the aggregation of human feedback to enhance the coherence of generated summaries, and secondly, the supervised fine-tuning of open-source LLMs based on user feedback to amplify their capacity for coherent summary generation. The figure provides the schematic representation of our proposed approach.
 
 ## Data
 
 In our pursuit of acquiring human feedback to refine the coherence of extractive summaries, we enlisted the expertise of annotation specialists to accurately annotate data dedicated to our task. 
 
-***Details about data and annotation instruction can be found in the `/data` folder. Please see this folder for further details.***
+***Details about data and annotation instructions can be found in the `/data` folder. Please see this folder for further details.***
 
-Full dataset is provided in `/data/annotated_data/data.json` file. The file is provided in following format:
+Full dataset is provided in `/data/annotated_data/data.json` file. The file is provided in the following format:
 
-```Json
+```JSON
 {
   "type": "[Type of the document]",
   "document": "[Text corresponding to source document]",
@@ -74,7 +74,7 @@ python run_model_falcon.py \
         --bf16 True
 ```
 
-Before running Llama-2-13B model, make sure that you have applied for access from huggingface (https://huggingface.co/meta-llama/Llama-2-13b-hf), and also you have huggingface logic in your system through cli. Please use below command for huggingface cli login:
+Before running the Llama-2-13B model, make sure that you have applied for access from huggingface (https://huggingface.co/meta-llama/Llama-2-13b-hf), and also you have huggingface logic in your system through cli. Please use the below command for huggingface cli login:
 
 ```shell
 huggingface-cli login
@@ -121,12 +121,12 @@ Llama-2-13B: 2 GPUs A100 (80GB)
 
 ## Full Parametric Training
 
-We only fine-tune Llama-2-7b-hf model for full parametric training. Below is a step-by-step guide to fine-tune it:
+We only fine-tune the Llama-2-7b-hf model for full parametric training. Below is a step-by-step guide to fine-tune it:
 
 1. `git clone https://github.com/facebookresearch/llama-recipes.git`
-2. Go to the llama-reciepe Github, please make sure to install from source (https://github.com/facebookresearch/llama-recipes#install-from-source)
+2. Go to the llama-recipe Github, please make sure to install from the source (https://github.com/facebookresearch/llama-recipes#install-from-source)
 3. Once you install from the source, replace the samsum dataset file from `/src/llama_recipes/datasets/samsum_dataset.py` with the file provided in `/src/finetune_full_param/dataset/samsum.py`.
-4. Make sure to change line 15 and 18 with path of relevant training and testing files.
+4. Make sure to change lines 15 and 18 with the path of relevant training and testing files.
 5. Run below command to perform training:
 
 ```shell
@@ -136,7 +136,7 @@ export CUDA_VISIBLE_DEVICES=[GPUs]
 torchrun --nnodes 1 --nproc_per_node 4 ./examples/finetuning.py --enable_fsdp --model_name meta-llama/Llama-2-7b-hf --dist_checkpoint_root_folder [path to output folder] --dist_checkpoint_folder [name of output folder] --use_fast_kernels 
 ```
 
-6. Once trainng is completed, please use below command for model conversion to Hugging Face:
+6. Once training is completed, please use the below command for model conversion to Hugging Face:
 
 ```shell
 python -m llama_recipes.inference.checkpoint_converter_fsdp_hf --fsdp_checkpoint_path {path}/Llama-2-7b-hf --consolidated_model_path {save-path}/Llama-2-7b-hf-converted/  --HF_model_path_or_name meta-llama/Llama-2-7b-hf
@@ -157,7 +157,7 @@ We fine-tuned these models using `deepspeed`. Config file for deepspeed will be 
 
 ### Training and Evaluation
 
-This script computes `Rouge-L` metric by default.
+This script computes the `Rouge-L` metric by default.
 
 ```shell
 set -x
