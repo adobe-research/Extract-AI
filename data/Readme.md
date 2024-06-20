@@ -30,23 +30,17 @@ Prompt:
 You are an extractive summarizer. You are presented with a document. The document is a collection of sentences and each sentence is numbered with sentence ids. Understand the given document and create a meaningful summary by picking sentences from the document. Please list the sentence IDs as output so that sentences corresponding to the generated IDs summarize the document coherently. Learn from the below example:
 
 Document:
-1. Olympic gold medallist Jessica Ennis-Hill has confirmed she will return to competition in London this July following her break from athletics to become a mother.
-2. Ennis-Hill provided one of London 2012's most captivating storylines by surging to heptathlon gold, and the Sheffield-born star will return to the Olympic Stadium three years on to compete in the Sainsbury's Anniversary Games.
-3. The 29-year-old has not competed since the same event in 2013 and gave birth to her son, Reggie, last summer.
-4. But her return to action sets up the prospect of a showdown against Katarina Johnson-Thompson, the brilliant young British heptathlete who is the heir to Ennis-Hill's throne.
-5. Jessica Ennis-Hill became a national hero when she won heptathlon gold at the London 2012 Olympics.
-6. Ennis-Hill has not competed since 2013 as she took time off to become a mother.
-7. 'I am really looking forward to it,' said Ennis-Hill, who could compete in the long jump or 110m hurdles.
-8. 'My race schedule is starting to start to take shape and it will be good to compete and get a sense of where I am in my return to competing.
-9. 'My main goal this season is to be as competitive as possible with the long-term goal being the Rio Olympics.
-10. 'Diamond League meetings always have the best athletes in the world so I\u2019m sure this will be a good test for me; I want to perform well back on the big stage in London but I will be realistic as 2015 is about the challenge of getting back to competitive shape after having my little boy and ultimately making the necessary progression to be at my best for Rio.'
-11. Katarina Johnson-Thompson has emerged as the new rising star of British athletics and Ennis-Hill's heir.
-12. Another British hero of London 2012, Mo Farah, will also compete in the Diamond League event, which serves as a warm-up for the World Championships in Beijing in August.
-13. Ennis-Hill will take part in the two-day meeting on July 24 and 25, with Sainsbury's IPC Athletics Grand Prix Final taking place on July 26.
-14. Ennis-Hill added: 'The 2012 Olympics were an incredible experience for me and it will be very special to step out on that track again.
-15. It will be amazing to compete in front of all our British fans who I am sure will have their own memories of the London Games too.
+1. In "Rules about Copying and Sharing Java Code," author Josh Smith believes that code copied from others should be cited as such, otherwise it is plagiarism.
+2. Another important idea that Smith discusses is that most discussions of plagiarism are with respect to "works in written and spoken language," and hence he wants to discuss how to cite the work of others within computer programs.
+3. He supports this latter idea by specifying that "due credit" is given to others by specifying the original author, the source where the code was obtained, and any alterations that the current author is making to the original code.
+4. The author provides examples of citations whose source is from a textbook, an instructor, the Internet, from multiple sources, and from code that is "common knowledge" in order to show how one can always clearly identify the author of each code unit in a variety of situations.
+5. Another important point made by Smith is that code should never be transferred between students electronically, because this would imply unsuitable sharing of work and plagiarism.
+6. Smith's target audience is computer science students, as it is likely that either they are unaware of plagiarism in general, or they are aware of plagiarism in other fields but have not considered how it applies specifically when writing code.
+7. This material relates to the current course material because it comes after the design process and during the implementation process, when the most code is being written and would be most available for potential copying.
+8. Smith's guidelines for copying and reusing code are accurate and useful; however, he forgets that sometimes a great deal can be learned by examining code written by others.
+9. It would have been nice if he had left some provision where it was okay to do this under the right circumstances.
 
-Summary: <s> [2, 5, 6, 11, 12, 15]
+Summary: <s> [1, 2, 5, 6, 8]
 
 Document: [input text document]
 
