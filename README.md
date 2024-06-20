@@ -2,7 +2,9 @@
 
 Coherence plays a pivotal role in creating a high-quality summary of a document. In recent times, neural extractive summarization has become increasingly popular, yet, most of them ignore the coherence of summaries when extracting sentences. Coherence emerges as a crucial attribute of text summarization since It holds a significant connection to user experience and profoundly influences the comprehensibility of the generated or extracted summaries. Within the context of extractive summarization, coherence becomes quantifiable through the interconnection among sentences and ease of readability. However, attaining this coherence within an extractive summary presents a challenge, given that the extracted sentences don't inherently assure coherence.
 
-<p align="center"> <img width="700" alt="approach" src="https://github.com/user-attachments/files/15920455/teaser_2.pdf"></p>
+<p align="center">
+  <img src="https://github.com/adobe-research/Extract-AI/assets/47143544/2d61a7f6-dbd9-4ba5-81e8-5f1ae29ef54a" width="550" height="450">
+</p>
 
 To improve the coherence in extractive summarization, we approach the concept of coherence within summaries through the lens of user-specific intent. With this user-centric perspective, our approach entails training LLMs using human feedback, a tactic aimed at refining the coherence in the generated summaries. Drawing inspiration from InstructGPT, our strategy involves fine-tuning the model to align with user intent and ensure the production of coherent summaries. Thus, our approach comprises two primary components: firstly, the aggregation of human feedback to enhance the coherence of generated summaries, and secondly, the supervised fine-tuning of open-source LLMs based on user feedback to amplify their capacity for coherent summary generation. The figure provides the schematic representation of our proposed approach.
 
