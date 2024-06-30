@@ -201,3 +201,6 @@ All training and evaluation is conducted on 4 GPUs A100 (40GB)
 Mihir Parmar (Adobe Intern): mihirp@adobe.com \
 Hanieh Deilamsalehy: deilamsa@Adobe.com
 
+## License
+
+The code and model are licensed under the [Adobe Research License](./LICENSE.md). The license prohibits commercial use and allows non-commercial research use. The DialogueSum dataset is under CC BY-NC-SA 4.0 license. The DebateSum dataset is under MIT license. The MeetingBank dataset is under CC-BY-NC-ND 4.0 International license.
