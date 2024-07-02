@@ -61,7 +61,7 @@ All fine-tuning scripts for LoRA are provided at `/src/finetune_quantization/uti
 
 ### Training with LoRA
 
-To run the Falcon-40B-Instruct model, please use below command:
+To run the Falcon-40B-Instruct model, please use the command below:
 
 ```shell
 export TRANSFORMERS_CACHE=[path where you want to store the model weights]
