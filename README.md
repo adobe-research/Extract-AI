@@ -1,6 +1,6 @@
 # Enhancing Coherence in Extractive Summarization using LLMs with Human Feedback
 
-This is the git repository containing the code and data for our paper [Towards Enhancing Coherence in Extractive Summarization: Dataset and Experiments with LLMs](https://arxiv.org/pdf/2407.04855).
+This is the git repository containing the code and data for our paper [Towards Enhancing Coherence in Extractive Summarization: Dataset and Experiments with LLMs](https://arxiv.org/pdf/2407.04855) (EMNLP 2024). 
 
 Coherence plays a pivotal role in creating a high-quality summary of a document. In recent times, neural extractive summarization has become increasingly popular, yet, most of them ignore the coherence of summaries when extracting sentences. Coherence emerges as a crucial attribute of text summarization since It holds a significant connection to user experience and profoundly influences the comprehensibility of the generated or extracted summaries. Within the context of extractive summarization, coherence becomes quantifiable through the interconnection among sentences and ease of readability. However, attaining this coherence within an extractive summary presents a challenge, given that the extracted sentences don't inherently assure coherence.
 
